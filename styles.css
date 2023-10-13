@@ -2,10 +2,15 @@
 *{box-sizing: border-box;}
 
 body{
+background-color: #f1f1f1;
 position: relative;
+height: 100%;
+display: flex;
+flex-flow: column nowrap;
+justify-content: space-between;
 padding: 0;
 margin: 0;
-overflow: hidden;
+overflow: auto;
 font-family: Arial, Helvetica, sans-serif;
 }
 main{
@@ -174,16 +179,8 @@ text-align: center;
 padding: 10px;
 margin: 16px -8px 0px;
 }
-footer{
-position: relative;
-}
 #companyNameHome{
-margin: 0;
-padding: 20px;
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
+padding: 16px;
 }
 .suggestionBoxContainer{
 width: 96%;
