@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Okwori Joseph" />
+<meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+<title>Corpers posting details</title>
+<link rel="icon" href="jhl.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="jhl.png" type="image/png" sizes="48x48"/>
+<link rel="icon" href="jhl.png" type="image/png" sizes="72x72"/>
+<link rel="icon" href="jhl.png" type="image/png" sizes="144x144"/>
+
+<style>
+@import url('styles.css');
+</style>
+</head>
+<body>
+<main>
+<h1>NYSC ISUIKWATO CORPS MEMBERS PERSONALIA FORM</h1>
+<p>
+Welcome Gentleman Corps Member!
+</p>
+
+<p class="NotesContent">
+<strong>Notes: <br /></strong>
+This form is just for the purpose of data computation and shall be treated as such and nothing more. <br /><br />
+All comments shall be tendered as anonymous and taken as suggestions without trying to identify the writer/sender.
+</p>
+<br /><br />
+<div class="btnContainer">
+<button type="button" id="btn-goToForm" onclick="goToForm()">Fill the Form</button>
+<button type="button" id="btn-goToComment" onclick="goToComment()">Leave us a comment</button>
+</div>
+</main>
+<div class="footer">
+<h1 class="companyName" id='companyNameHome'>Powered By: Joehel Inc.  &copy;2023
+  <div class="jhlLogoContainer">
+<img src="jhl.png" alt="" class="jhlLogo">
+</div>
+</h1>
+</div>
+
+
+
+<div id="formModalBox" class=modal>
+<div id="formContainer">
+<span class="closeIcon closeBtn">&times;</span>
+<form action="" method="post" id="formPersonalia">
+<div class="accountPhotoContainer">
+<img src="icon_account.png" alt="">
+
+</div>
+<fieldset>
+<legend>PERSONALIA</legend>
+<label for="surname">Surname</label>
+<input type="text" name="surname" id="surname" required placeholder="Enter surname">
+
+<label for="otherNames">Other names</label>
+<input type="text" name="otherNames" id="otherNames" required placeholder="Enter First-name Middle-name">
+
+<div id="genderContainer">
+Gender: <br />
+<input type="radio" id="male" name="gender" value="male">
+<label for="male"> Male</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female"> Female</label>
+
+<input type="radio" id="genderNA" name="gender" value="NA" checked>
+<label for="genderNA">None</label>
+
+</div>
+<label for="phoneNumber">Phone number</label>
+<input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter WhatsApp number" required>
+
+<label for="email">Email</label>
+<input type="email" name="email" id="email" placeholder="Enter email">
+</fieldset>
+<fieldset>
+<legend>PRIMARY PLACE OF ASSIGNMENT</legend>
+<label for="stateCode">NYSC state code</label>
+<input type="text" id="stateCode" name="stateCode" required placeholder="Enter state code">
+
+<label for="batch">Batch</label>
+<select name="batch" id="batch">
+<option value="NA">Click to choose one</option>
+<option value="A1">Batch A Stream I</option>
+<option value="A2">Batch A Stream II</option>
+<option value="B1">Batch B Stream I</option>
+<option value="B2">Batch B Stream II</option>
+<option value="C1">Batch C Stream I</option>
+<option value="C2">Batch C Stream II</option>
+</select>
+
+<label for="CDSGroup">CDS Group</label>
+<input type="text" list="listCDSGroup" id="CDSGroup" name="CDSGroup" placeholder="Type here">
+<datalist id="listCDSGroup">
+<option value="Education Development">
+<option value="Environmental Protection and Sanitation">
+<option value="Fire Disaster Awareness and Prevention, Council">
+<option value="Fire Disaster Awareness and Prevention, Ozara branch">
+<option value="Medical and Health Services">
+<option value="Financial Inclusion">
+<option value="War Against Drug Abuse">
+</datalist>
+
+<label for="PPALocation">PPA Location</label>
+<input type="text" name="PPALocation" id="PPALocation" required placeholder="Enter PPA location eg. Uturu">
+
+<label for="PPAName">Name of PPA</label>
+<input type="text" name="PPAName" id="PPAName" placeholder="Enter the correct name of PPA">
+
+</fieldset>
+<div class="submitSection">
+<button type="reset" id="btnReset" class="closeBtn">Clear & Close</button>
+<button type="submit" id="btnSubmit">Submit</button>
+</div>
+<div class="footer">
+<h1 class="companyName">Powered By: Joehel Inc.  &copy;2023</h1>
+</div>
+
+</form>
+</div>
+</div>
+<!-- END modalBox -->
+<div id="commentModalBox" class="modal">
+<form action="" method="post" id="formComment" accept-charset="utf-8">
+<p>
+Welcome!<br />
+Please drop an honest comment and/or suggestions
+</p>
+<div class="suggestionBoxContainer">
+<span class="closeIcon closeBtn">&times;</span>
+<textarea name="suggestionBox" id=suggestionBox rows="10" cols="40"></textarea>
+</div>
+<div class="submitSection btnContainer">
+<button type="reset" id='btnReset' class="closeBtn">Clear & Close</button>
+<button type="submit" id="btnSubmit">Submit</button>
+</div>
+<div class="footer">
+<h1 class="companyName">Powered By: Joehel Inc.  &copy;2023</h1>
+</div>
+
+
+</form>
+</div>
+
+<script src="script.js" charset="utf-8"></script>
+</body>
+</html>
