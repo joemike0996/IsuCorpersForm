@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="author" content="Okwori Joseph" />
 <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
 <title>Corpers posting details</title>
@@ -16,14 +16,17 @@
 </style>
 </head>
 <body>
+<header>
+<h1>NYSC Isuikwato Corps Members Personalia Form</h1>
+</header>
+
 <main>
-<h1>NYSC ISUIKWATO CORPS MEMBERS PERSONALIA FORM</h1>
-<p>
+ <p>
 Welcome Gentleman Corps Member!
 </p>
 
-<p class="NotesContent">
-<strong>Notes: <br /></strong>
+<p class="notesContent">
+<strong>Notes:</strong><br />
 This form is just for the purpose of data computation and shall be treated as such and nothing more. <br /><br />
 All comments shall be tendered as anonymous and taken as suggestions without trying to identify the writer/sender.
 </p>
@@ -32,25 +35,14 @@ All comments shall be tendered as anonymous and taken as suggestions without try
 <button type="button" id="btn-goToForm" onclick="goToForm()">Fill the Form</button>
 <button type="button" id="btn-goToComment" onclick="goToComment()">Leave us a comment</button>
 </div>
-</main>
-<footer class="footer">
-<h1 class="companyName" id='companyNameHome'>Powered By: Joehel Inc.  &copy;2023
-  <div class="jhlLogoContainer">
-<img src="jhl.png" alt="" class="jhlLogo">
-</div>
-</h1>
-</footer>
 
-
-
+<!-- Modal Section -->
 <div id="formModalBox" class=modal>
 <div id="formContainer">
 <span class="closeIcon closeBtn">&times;</span>
 <form action="" method="post" id="formPersonalia">
-<div class="accountPhotoContainer">
-<img src="icon_account.png" alt="">
+<div class="accountPhotoContainer"><img src="icon_account.png" alt=""></div>
 
-</div>
 <fieldset>
 <legend>PERSONALIA</legend>
 <label for="surname">Surname</label>
@@ -67,10 +59,10 @@ Gender: <br />
 <input type="radio" id="female" name="gender" value="female">
 <label for="female"> Female</label>
 
-<input type="radio" id="genderNA" name="gender" value="NA" checked>
-<label for="genderNA">None</label>
-
+<input type="radio" id="none" name="gender" value="none" checked>
+<label for="none">None</label>
 </div>
+
 <label for="phoneNumber">Phone number</label>
 <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter WhatsApp number" required>
 
@@ -78,13 +70,13 @@ Gender: <br />
 <input type="email" name="email" id="email" placeholder="Enter email">
 </fieldset>
 <fieldset>
-<legend>PRIMARY PLACE OF ASSIGNMENT</legend>
+<legend>P.P.A. Details</legend>
 <label for="stateCode">NYSC state code</label>
 <input type="text" id="stateCode" name="stateCode" required placeholder="Enter state code">
 
 <label for="batch">Batch</label>
 <select name="batch" id="batch">
-<option value="NA">Click to choose one</option>
+<option value="none" selected>Click to choose one</option>
 <option value="A1">Batch A Stream I</option>
 <option value="A2">Batch A Stream II</option>
 <option value="B1">Batch B Stream I</option>
@@ -116,14 +108,14 @@ Gender: <br />
 <button type="reset" id="btnReset" class="closeBtn">Clear & Close</button>
 <button type="submit" id="btnSubmit">Submit</button>
 </div>
-<div class="footer">
-<h1 class="companyName">Powered By: Joehel Inc.  &copy;2023</h1>
-</div>
+<h1 class="modalCompanyName">Powered By: Joehel Inc.  &copy;2023</h1>
 
 </form>
 </div>
 </div>
-<!-- END modalBox -->
+<!-- END modalBox1 -->
+
+
 <div id="commentModalBox" class="modal">
 <form action="" method="post" id="formComment" accept-charset="utf-8">
 <p>
@@ -132,20 +124,30 @@ Please drop an honest comment and/or suggestions
 </p>
 <div class="suggestionBoxContainer">
 <span class="closeIcon closeBtn">&times;</span>
-<textarea name="suggestionBox" id=suggestionBox rows="10" cols="40"></textarea>
+<textarea name="suggestionBox" id=suggestionBox rows="10" cols="40" placeholder="Enter your comments/suggestions here!"></textarea>
 </div>
 <div class="submitSection btnContainer">
 <button type="reset" id='btnReset' class="closeBtn">Clear & Close</button>
 <button type="submit" id="btnSubmit">Submit</button>
 </div>
-<div class="footer">
-<h1 class="companyName">Powered By: Joehel Inc.  &copy;2023</h1>
-</div>
-
+<h1 class="modalCompanyName">Powered By: Joehel Inc.  &copy;2023</h1>
 
 </form>
 </div>
+<!-- END modalBox2 -->
 
+</main>
+<footer>
+<h1 id='companyNameHome'>Powered By: Joehel Inc.  &copy;2023
+  <div class="jhlLogoContainer">
+<img src="jhl.png" alt="" class="jhlLogo">
+</div>
+</h1>
+</footer>
+
+
+
+ <!-- End wraper -->
 <script src="script.js" charset="utf-8"></script>
 </body>
 </html>
