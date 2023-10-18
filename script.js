@@ -7,15 +7,12 @@ function resizer() {
   screenHt = window.innerHeight;
   docHt = document.body.offsetHeight;
   let mainHtScrn = screenHt - headerHt - footerHt;
-  let mainHtDoc = docHt - headerHt - footerHt;
 
   if (docHt < screenHt) {
     document.querySelector('main').style.height = mainHtScrn+"px";
   } else {
     document.querySelector('main').style.height = 'auto';
   }
-  // document.querySelector('header').style.backgroundColor = 'red';
-  console.log('header = ',headerHt,'footer = ', footerHt,'screen = ', screenHt,'document = ', docHt, 'mainScr = ', mainHtScrn, 'mainDoc = ', mainHtDoc)
 }
 
 let formModalBox = document.getElementById('formModalBox');
