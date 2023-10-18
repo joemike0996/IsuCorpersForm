@@ -1,5 +1,8 @@
 @charset="utf-8";
-*{-webkit-box-sizing: border-box;box-sizing: border-box;}
+*{
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
 html{
 font-size: 100%;
 }
@@ -12,15 +15,16 @@ header, footer{
 background-color: dodgerblue;
 color: #fff;
 text-align: center;
-padding: 10px 0;
+padding: 10px;
 }
 header h1:first-child{
 font-size: 18px;
-  
 }
 main{
 background-color: #f1f1f1;
 padding: 20px;
+margin: 0;
+
 }
 #companyNameHome{
 font-size: 12px;
@@ -29,6 +33,7 @@ padding: 10px 0;
 }
 .notesContent{
 text-align: center;
+padding-top: 100px;
 }
 .modalCompanyName{
 font-size: 12px;

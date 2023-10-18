@@ -1,18 +1,21 @@
-window.addEventListener("load", resizer)
-window.addEventListener("resize", resizer)
+window.addEventListener("load", resizer);
+window.addEventListener("resize", resizer);
 
 function resizer() {
   let headerHt = document.querySelector('header').getBoundingClientRect().height;
   let footerHt = document.querySelector('footer').getBoundingClientRect().height;
   screenHt = window.innerHeight;
-  let mainHt = screenHt - headerHt - footerHt;
   docHt = document.body.offsetHeight;
+  let mainHtScrn = screenHt - headerHt - footerHt;
+  let mainHtDoc = docHt - headerHt - footerHt;
 
-  if (docHt <= screenHt) {
-    document.querySelector('main').style.height = mainHt;
+  if (docHt < screenHt) {
+    document.querySelector('main').style.height = mainHtScrn+"px";
   } else {
     document.querySelector('main').style.height = 'auto';
   }
+  // document.querySelector('header').style.backgroundColor = 'red';
+  console.log('header = ',headerHt,'footer = ', footerHt,'screen = ', screenHt,'document = ', docHt, 'mainScr = ', mainHtScrn, 'mainDoc = ', mainHtDoc)
 }
 
 let formModalBox = document.getElementById('formModalBox');
